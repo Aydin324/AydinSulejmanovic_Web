@@ -1,0 +1,40 @@
+body {
+  background-color: #85afd4;
+  font-family: lato, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.submit {
+  background-color: #e47272;
+  color: white;
+  border-radius: 20px;
+  margin-top: 10px;
+  border: 1px solid black;
+  min-width: 150px;
+  min-height: 35px;
+}
+
+a {
+  font-weight: bold;
+  color: white;
+}
+
+form {
+  margin: auto auto;
+  width: auto;
+  margin-top: -10px;
+}
+
+table {
+  margin: auto auto;
+  width: auto;
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+textarea {
+  max-height: 130px;
+  width: 90%;
+}

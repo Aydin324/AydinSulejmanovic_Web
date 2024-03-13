@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/?query=lato" />
   </head>
   <body>
     <center>
@@ -46,7 +48,7 @@
           <td>
             <input type="radio" id="radio1" /><label for="radio1">Male</label
             ><br />
-            <input type="radio" id="radio2" /><label for="radio2">Fenale</label
+            <input type="radio" id="radio2" /><label for="radio2">Female</label
             ><br />
             <input type="radio" id="radio3" /><label for="radio3">Other</label>
           </td>
@@ -67,7 +69,9 @@
           <td>Notes:</td>
         </tr>
         <tr>
-          <td><textarea id="textarea" cols="30" rows="10"></textarea></td>
+          <td colspan="2">
+            <textarea id="textarea" cols="30" rows="10"></textarea>
+          </td>
         </tr>
         <tr>
           <td>
@@ -77,7 +81,7 @@
         </tr>
       </table>
       <a href="index.html">
-        <button type="button">Register</button>
+        <button type="button" class="submit">Register</button>
       </a>
     </form>
   </body>
