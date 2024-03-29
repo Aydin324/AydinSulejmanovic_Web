@@ -1,0 +1,8 @@
+tr:hover {
+  background-color: grey;
+  transition-duration: 300ms;
+}
+
+table {
+  margin-top: 5%;
+}
