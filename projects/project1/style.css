@@ -1,106 +1,26 @@
-header {
-  width: 100%;
-  height: 250px;
-  background-color: bisque;
-  margin: 0px;
-  padding-top: 0px;
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+nav {
+  border-bottom: 2px solid black;
 }
 
-footer {
-  width: 100%;
-  height: 150px;
-  background-color: bisque;
-  margin: 0px;
-  display: flex;
-  flex-direction: column;
+.card {
+  width: 100% !important;
+  height: 100% !important;
+  transition: outline 0.3s ease !important;
 }
 
-.footer {
-  margin: 5px auto;
-  font-size: 18px;
+.card:hover {
+  outline: 4px solid greenyellow !important;
 }
 
-body {
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+/* Style the logo */
+.navbar-logo {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.diva {
-  flex: 0 0 50%;
-  font-family: PlayFair Display;
-  margin-left: 5%;
-}
-
-.divb {
-  flex: 0 0 100%;
-}
-
-#img1 {
-  max-height: 255px;
-  margin-top: -5px;
-  float: right;
-}
-
-.article {
-  display: flex;
-  width: 80%;
-  flex-direction: column;
-  margin: auto auto;
-  font-size: large;
-}
-
-.gallery {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  background-color: #d1f3c5;
-  min-height: 55%;
-  margin: auto auto;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  font-family: PlayFair Display;
-}
-
-img:not(#img1) {
-  max-width: 100%;
-  margin: 0 20px 0 20px;
-}
-
-.blocks {
-  /*max-height: 80%;
-  max-width: 30%;*/
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin-top: 15px;
-}
-
-label {
-  margin: 5px;
-}
-
-#hd1 {
-  padding-top: 10px;
-  flex: 1;
-  font-size: 25px;
-}
-
-#hd2 {
-  font-size: 70px;
-  margin-bottom: -30px;
-}
-
-#f1 {
-  font-size: 20px;
-  margin: 15px auto 15px auto;
+#modal {
+  margin-top: 25px;
 }

@@ -14,10 +14,12 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <title>Profile card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="altstyle.css" />
+    <title>Project 1</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm bg-body-tertiary">
+    <nav class="navbar navbar-expand-sm bg-body-tertiary fixed-top">
       <div class="container-fluid">
         <button
           class="navbar-toggler"
@@ -31,32 +33,143 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">Hidden brand</a>
+          <a class="navbar-brand" href="index.html" style="color: greenyellow"
+            >Home</a
+          >
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="form.html"
+                >Join our team</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="about_us.html">About us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a
+                class="nav-link"
+                href="https://www.yokohamatire.com/motorsports"
+                target="_blank"
+                >Sponsor</a
+              >
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+
+          <div class="navbar-logo" style="margin-right: 0.8%">
+            . . .iPerformance
+          </div>
         </div>
       </div>
     </nav>
+
+    <div class="container">
+      <p
+        class="text-center py-3"
+        style="margin-top: 6% !important; font-size: larger"
+      >
+        Ever thought what pain it is to pick and choose all the different
+        manufacturers for your parts? Well no worries, we've got you covered!
+        Pick and choose from the very best.
+      </p>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card d-flex flex-column position-relative">
+            <img
+              src="img/wheel.png"
+              alt="wheel"
+              style="width: 80%; margin: 10% auto 0 auto"
+              class="card-img-top"
+            />
+            <div class="card-body position-absolute bottom-0 start-0">
+              <h5 class="card-title">Wheels</h5>
+              <p class="card-text">
+                From cast aluminium to forged magnesium, there is simply no room
+                for mediocrity. We hear steelies aren't all the rage anymore.
+              </p>
+              <a
+                href="https://www.yokohama.com.au/wheels"
+                target="_blank"
+                class="btn btn-primary"
+                >Visit ADVAN</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="img/tyre.png" alt="tyre" />
+            <div class="card-body">
+              <h5 class="card-title">Tyres</h5>
+              <p class="card-text">
+                Need some rubber? Fast rubber? For rain, asphalt and grain, for
+                all classes and all vehicles. Pick a category and compound, the
+                professionals will solve the rest.
+              </p>
+              <a
+                href="https://www.yokohama.eu/"
+                target="_blank"
+                class="btn btn-primary"
+                >Visit YOKOHAMA</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card d-flex flex-column position-relative">
+            <img
+              src="img/brake.png"
+              alt="brakes"
+              style="width: 80%; margin: 10% auto 0 auto"
+              class="card-img-top"
+            />
+            <div class="card-body position-absolute bottom-0 start-0">
+              <h5 class="card-title">Brake systems</h5>
+              <p class="card-text">
+                The devil is in the details - except that brakes aren't details!
+                Why don't you gift yourself a new set of carbon-ceramics?
+              </p>
+              <a
+                href="https://www.brembo.com/en"
+                target="_blank"
+                class="btn btn-primary"
+                >Visit BREMBO</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center py-3">
+        Whatever suits you best, I'm sure we can find it here somewhere.
+      </p>
+      <div>
+        <h1 style="margin-top: 45px" class="text-center">
+          Want to work for us? We don't see a reason not to!
+        </h1>
+        <p style="margin: 15px auto 80px auto; width: 75%" class="text-center">
+          Seeing as how automotive market is an ever-changing climate, we really
+          do need people like you, <i>Passionatos</i> as the Italians say, to
+          help guide the younger generations. Tell you what, go to the
+          <b>Join our team</b> tab, and check it out! Who knows, maybe you'll
+          like it here.
+        </p>
+      </div>
+    </div>
+
+    <footer
+      class="footer mt-auto py-1 bg-light fixed-bottom"
+      style="
+        opacity: 80%;
+        background-color: black !important;
+        height: 5% !important;
+      "
+    >
+      <div class="container">
+        <span class="text-muted"
+          ><p class="text-center">All rights reserved.</p></span
+        >
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

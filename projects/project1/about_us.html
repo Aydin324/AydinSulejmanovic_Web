@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project 1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="altstyle.css" />
+    <title>Project 1</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="index.html">Home</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="form.html"
+                >Join our team</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: greenyellow"
+                >About us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.yokohamatire.com/motorsports"
+                target="_blank"
+                >Sponsor</a
+              >
+            </li>
+          </ul>
+
+          <div class="navbar-logo" style="margin-right: 2%">
+            . . .iPerformance
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="about">
+      <h1>Say what you will, but our products speak for themselves</h1>
+      <p class="text-center about">
+        <b>iPerformance</b>, your one-stop shop for all-around motorsport track
+        items, has been fueling the passion of motorsport enthusiasts since
+        2016. We are proud to collaborate with industry leaders such as
+        Yokohama, Advan, and Brembo to bring you the best in performance gear.
+      </p>
+      <p>
+        Our commitment goes beyond providing high-quality products. We deeply
+        care about our clients and their pursuit of performance. At
+        <b>iPerformance</b>, we believe in the power of speed, precision, and
+        the thrill of the race. Your performance is our passion. Welcome to
+        <b>iPerformance</b>, where performance meets excellence.
+      </p>
+    </div>
+    <div class="container text-center" id="modal">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+        style="background-color: black; color: greenyellow; border-color: black"
+      >
+        I'm ready!
+      </button>
+    </div>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              class="modal-title fs-5"
+              id="staticBackdropLabel"
+              style="color: black"
+            >
+              Are you really?
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Saying you're ready means you agree to our terms of service, which
+            can be found on official Yokohama website. Visit the Sponsor page
+            for more information.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <a
+              href="index.html"
+              class="btn btn-primary"
+              style="
+                background-color: greenyellow;
+                color: black;
+                border-color: greenyellow;
+              "
+              >Understood</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="footer mt-auto py-1 bg-light fixed-bottom"
+      style="
+        opacity: 80%;
+        background-color: black !important;
+        height: 5% !important;
+      "
+    >
+      <div class="container">
+        <span class="text-muted"
+          ><p class="text-center">All rights reserved.</p></span
+        >
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
