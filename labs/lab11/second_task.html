@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Address Information</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var ipAddress = ""; // Replace with the IP address you want to query, or leave it empty to get information about your own IP address
+
+        $.ajax({
+          url: "https://ipapi.co/" + ipAddress + "/json/",
+          dataType: "json",
+          success: function (data) {
+            constructTable(data);
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            console.error("Error fetching data: " + errorThrown);
+          },
+        });
+
+        function constructTable(data) {
+          var table = $("<table>").addClass("ip-info-table");
+          $.each(data, function (key, value) {
+            var row = $("<tr>").append(
+              $("<td>").text(key),
+              $("<td>").text(value)
+            );
+            table.append(row);
+          });
+
+          $("#tableContainer").empty().append(table);
+        }
+      });
+    </script>
+    <style>
+      /* Style for the IP address information table */
+      .ip-info-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .ip-info-table td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tableContainer"></div>
+  </body>
+</html>

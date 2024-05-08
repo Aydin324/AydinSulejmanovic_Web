@@ -1,0 +1,24 @@
+.language-table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.language-table th,
+.language-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.language-table th {
+  background-color: #f2f2f2;
+}
+
+.language-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.language-table tbody tr:hover {
+  background-color: #ddd;
+}

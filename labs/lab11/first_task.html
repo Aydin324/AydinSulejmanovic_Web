@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Table</title>
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          url: "languages.json",
+          dataType: "json",
+          success: function (data) {
+            constructTable(data);
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            console.error("Error fetching data: " + errorThrown);
+          },
+        });
+
+        function constructTable(data) {
+          var table = $("<table>").addClass("language-table");
+          var header = $("<tr>").append(
+            $("<th>").text("Code"),
+            $("<th>").text("Name")
+          );
+          table.append(header);
+
+          $.each(data, function (index, language) {
+            var row = $("<tr>").append(
+              $("<td>").text(language.code),
+              $("<td>").text(language.name)
+            );
+            table.append(row);
+          });
+
+          $("#tableContainer").empty().append(table);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="tableContainer"></div>
+  </body>
+</html>
