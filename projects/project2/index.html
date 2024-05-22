@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project 1</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -14,118 +13,80 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="altstyle.css" />
-    <title>Project 1</title>
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include jQuery Validation Plugin -->
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-    <!-- Include jQuery Validation Additional Methods (Optional) -->
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-    <style>
-      .error {
-        color: red;
-      }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/altstyle.css" />
+    <title>Project 2</title>
   </head>
   <body>
-    <div class="container">
-      <h1>My second Foundations of Web Development project!</h1>
-      <p>Text goes here!</p>
+    <nav class="navbar navbar-expand-sm bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#view_1">Home</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#view_2"
+                >Join our team</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#view_3">About us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.yokohamatire.com/motorsports"
+                target="_blank"
+                >Sponsor</a
+              >
+            </li>
+          </ul>
 
-      <h2>Contact Form</h2>
-      <form id="contactForm">
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <div class="navbar-logo" style="margin-right: 0.8%">
+            . . .iPerformance
+          </div>
         </div>
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div>
-          <label for="datepicker">Date:</label>
-          <input type="text" id="datepicker" name="date" required />
-        </div>
-        <div>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <div>
-          <label for="confirm_password">Confirm Password:</label>
-          <input
-            type="password"
-            id="confirm_password"
-            name="confirm_password"
-            required
-          />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
+      </div>
+    </nav>
 
-      <div id="responseMessage"></div>
-    </div>
+    <main id="spapp" role="main">
+      <section id="view_1" data-load="index_home.html"></section>
+      <section id="view_2" data-load="form.html"></section>
+      <section id="view_3" data-load="about_us.html"></section>
+    </main>
 
-    <script>
-      $(document).ready(function () {
-        $("#contactForm").validate({
-          rules: {
-            name: "required",
-            email: {
-              required: true,
-              email: true,
-            },
-            date: "required",
-            password: {
-              required: true,
-              minlength: 8, // Example: Minimum 8 characters
-            },
-            confirm_password: {
-              required: true,
-              equalTo: "#password",
-            },
-          },
-          messages: {
-            name: "Please enter your name",
-            email: {
-              required: "Please enter your email",
-              email: "Please enter a valid email address",
-            },
-            date: "Please select a date",
-            password: {
-              required: "Please enter a password",
-              minlength: "Password must be at least 8 characters long",
-            },
-            confirm_password: {
-              required: "Please confirm your password",
-              equalTo: "Passwords do not match",
-            },
-          },
-          submitHandler: function (form) {
-            $.ajax({
-              url: "submit.php", // Replace 'submit.php' with your backend endpoint
-              type: "POST",
-              data: $(form).serialize(),
-              success: function (response) {
-                $("#responseMessage").html(
-                  '<div class="success">Form submitted successfully!</div>'
-                );
-                // Clear the form
-                form.reset();
-              },
-              error: function (xhr, status, error) {
-                $("#responseMessage").html(
-                  '<div class="error">An error occurred while submitting the form.</div>'
-                );
-              },
-            });
-            return false; // Prevent default form submission
-          },
-        });
-      });
-    </script>
+    <footer
+      class="footer mt-auto py-1 bg-light"
+      style="
+        opacity: 80%;
+        background-color: black !important;
+        height: 5% !important;
+      "
+    >
+      <div class="container">
+        <span class="text-muted"
+          ><p class="text-center">All rights reserved.</p></span
+        >
+      </div>
+    </footer>
 
+    <script
+      src="https://code.jquery.com/jquery-3.1.0.min.js"
+      integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/jquery.spapp.js"></script>
+    <script src="assets/js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

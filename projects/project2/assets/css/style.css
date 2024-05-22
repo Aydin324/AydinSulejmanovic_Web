@@ -1,0 +1,67 @@
+nav {
+  border-bottom: 2px solid black;
+}
+
+.card {
+  width: 100% !important;
+  height: 100%;
+  transition: outline 0.3s ease !important;
+}
+
+.card:hover {
+  outline: 4px solid greenyellow !important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+/* Style the logo */
+.navbar-logo {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#modal {
+  margin-top: 25px;
+}
+body {
+  overflow: hidden;
+}
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-card {
+  width: 45% !important;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.form-header {
+  text-align: center;
+  padding: 10px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; 
+  padding-top: 50px;
+}
+
+.container-fluid {
+  display: block;
+}
+*/
+
+#view_1,
+#view_2,
+#view_3 {
+  margin: 40vh 0 40vh 0;
+}
