@@ -1,96 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js" data-theme="light" id="html">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>Responsive HTML5 Page Layout Template</title>
+    <meta
+      name="description"
+      content="Simple HTML5 Page layout template with header, footer, sidebar etc."
     />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/spapp.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/altstyle.css" />
-    <title>Project 2</title>
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-sm bg-body-tertiary fixed-top">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo01"
-          aria-controls="navbarTogglerDemo01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#view_1">Home</a>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#view_2"
-                >Join our team</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#view_3">About us</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://www.yokohamatire.com/motorsports"
-                target="_blank"
-                >Sponsor</a
-              >
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar navbar-expand justify-content-center">
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item">
+            <a class="nav-link btn" href="#page1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn" href="#page2">Apply</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn" href="#page3">Admin</a>
+          </li>
+          <li class="nav-item ms-auto" style="position: absolute; right: 0">
+            <button class="nav-link btn">
+              <ion-icon
+                name="bulb-outline"
+                style="font-size: 24px"
+                id="bulb"
+              ></ion-icon>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-          <div class="navbar-logo" style="margin-right: 0.8%">
-            . . .iPerformance
-          </div>
-        </div>
-      </div>
-    </nav>
+    <section id="pageContent">
+      <main id="spapp" role="main">
+        <section id="page1" data-load="page1.html"></section>
+        <section id="page2" data-load="page2.html"></section>
+        <section id="page3" data-load="page3.html"></section>
+      </main>
+    </section>
 
-    <main id="spapp" role="main">
-      <section id="view_1" data-load="index_home.html"></section>
-      <section id="view_2" data-load="form.html"></section>
-      <section id="view_3" data-load="about_us.html"></section>
-    </main>
-
-    <footer
-      class="footer mt-auto py-1 bg-light"
-      style="
-        opacity: 80%;
-        background-color: black !important;
-        height: 5% !important;
-      "
-    >
-      <div class="container">
-        <span class="text-muted"
-          ><p class="text-center">All rights reserved.</p></span
-        >
-      </div>
+    <footer class="footer fixed-bottom text-center fs-6">
+      <h3 class="fs-6" style="margin: 3px auto 3px auto">
+        All rights reserved<span class="circle-r">&#174;</span>
+      </h3>
     </footer>
 
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.spapp.min.js"></script>
+    <script src="./assets/js/script.js"></script>
     <script
-      src="https://code.jquery.com/jquery-3.1.0.min.js"
-      integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/jquery.spapp.js"></script>
-    <script src="assets/js/script.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="assets/js/load-table.js"></script>
   </body>
 </html>

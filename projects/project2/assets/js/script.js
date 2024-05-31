@@ -1,30 +1,20 @@
-addEventListener("DOMContentLoaded", (event) => {
-  $("main#spapp > section").height($(document).height() - 60);
-
+$(document).ready(function () {
   var app = $.spapp({
-    defaultView: "#view_1",
-    templateDir: "./tpl/",
-    pageNotFound: "error_404",
-  }); // initialize
-
-  // define routes
-  app.route({
-    view: "view_1",
-    load: "index_home.html",
+    defaultView: "#header",
+    templateDir: "views/",
   });
-
-  app.route({
-    view: "view_2",
-    load: "form.html",
-    onReady: function () {
-      document.getElementById("view_2").style.marginTop = "8vh";
-    },
-  });
-  app.route({
-    view: "view_3",
-    load: "about_us.html",
-  });
-
-  // run app
   app.run();
+});
+
+let isChanged = false;
+const htmltag = document.getElementById("html");
+document.getElementById("bulb").addEventListener("click", () => {
+  console.log("theme");
+  if (isChanged) {
+    htmltag.setAttribute("data-theme", "light");
+    isChanged = false;
+  } else {
+    htmltag.setAttribute("data-theme", "dark");
+    isChanged = true;
+  }
 });
