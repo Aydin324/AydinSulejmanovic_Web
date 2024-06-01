@@ -43,4 +43,10 @@ nav a:hover {
 #data-table {
   border: 2px solid blueviolet;
   padding: 5px;
+  margin: 1vh auto 5vh auto;
+}
+
+#accordion {
+  max-width: 70%;
+  margin: 0 auto 0 auto;
 }

@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var app = $.spapp({
-    defaultView: "#header",
+    defaultView: "#page1",
     templateDir: "views/",
   });
   app.run();

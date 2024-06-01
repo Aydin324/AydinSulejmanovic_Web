@@ -1,23 +1,173 @@
-<div class="container">
-    <h1>PAGE 2</h1>
-    <article>
-        <h2>Stet facilis ius te</h2>
-        <p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando
-            voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
-    </article>
-    <article>
-        <h2>Illud mollis moderatius</h2>
-        <p>Eum facete intellegat ei, ut mazim melius usu. Has elit simul primis ne, regione minimum id cum. Sea deleniti dissentiet ea. Illud mollis moderatius ut per, at qui ubique populo. Eum ad cibo legimus, vim ei quidam fastidii.</p>
-    </article>
-    <article>
-        <h2>Ex ignota epicurei quo</h2>
-        <p>Quo debet vivendo ex. Qui ut admodum senserit partiendo. Id adipiscing disputando eam, sea id magna pertinax concludaturque. Ex ignota epicurei quo, his ex doctus delenit fabellas, erat timeam cotidieque sit in. Vel eu soleat voluptatibus, cum
-            cu exerci mediocritatem. Malis legere at per, has brute putant animal et, in consul utamur usu.</p>
-    </article>
-    <article>
-        <h2>His at autem inani volutpat</h2>
-        <p>Te has amet modo perfecto, te eum mucius conclusionemque, mel te erat deterruisset. Duo ceteros phaedrum id, ornatus postulant in sea. His at autem inani volutpat. Tollit possit in pri, platonem persecuti ad vix, vel nisl albucius gloriatur no.
-        </p>
-    </article>
-
+<!--<div class="container mt-5">
+  <h2>Sample Form</h2>
+  <form id="sampleForm">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="date" class="form-control" id="date" name="date" required />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Gender</label><br />
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="gender"
+          id="genderMale"
+          value="male"
+          required
+        />
+        <label class="form-check-label" for="genderMale">Male</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="gender"
+          id="genderFemale"
+          value="female"
+          required
+        />
+        <label class="form-check-label" for="genderFemale">Female</label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div
+    id="successMessage"
+    class="alert alert-success mt-3"
+    style="display: none"
+  >
+    Data saved successfully!
+  </div>
 </div>
+<script>
+  $(document).ready(function () {
+    // jQuery validation
+    $("#sampleForm").validate({
+      submitHandler: function (form) {
+        console.log("Form is valid and ready to be submitted");
+
+        // Simulate form submission with a client-side delay
+        setTimeout(function () {
+          console.log("Form submitted successfully");
+          toastr.success("Data saved successfully!");
+          $("#successMessage").show();
+        }, 1000);
+
+        return false; // Prevent the default form submission
+      },
+    });
+  });
+</script> -->
+
+<div class="container mt-5">
+  <h2>Sample Form</h2>
+  <form id="sampleForm">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="date" class="form-control" id="date" name="date" required />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Gender</label><br />
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="gender"
+          id="genderMale"
+          value="male"
+          required
+        />
+        <label class="form-check-label" for="genderMale">Male</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="gender"
+          id="genderFemale"
+          value="female"
+          required
+        />
+        <label class="form-check-label" for="genderFemale">Female</label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div
+    id="successMessage"
+    class="alert alert-success mt-3"
+    style="display: none"
+  >
+    Data saved successfully!
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    // jQuery validation
+    $("#sampleForm").validate({
+      submitHandler: function (form) {
+        console.log("Form is valid and ready to be submitted");
+
+        // Simulate AJAX form submission
+        $.ajax({
+          url: "your-simulated-endpoint", // Simulated endpoint
+          type: "POST",
+          data: $(form).serialize(),
+          success: function (response) {
+            console.log("Form submitted successfully");
+            toastr.success("Data saved successfully!");
+            $("#successMessage").show();
+          },
+          error: function (xhr, status, error) {
+            console.error("Error occurred: ", status, error);
+            toastr.error("There was an error saving data.");
+          },
+        });
+
+        return false; // Prevent the default form submission
+      },
+    });
+  });
+</script>
