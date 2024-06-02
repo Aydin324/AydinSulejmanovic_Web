@@ -13,5 +13,20 @@
     "name": "Dino Klisura",
     "car": "Dodge Challenger Hellcat",
     "time": 10.15
+  },
+  {
+    "name": "Aydin Sulejmanovic",
+    "car": "BMW M4 G82 CS",
+    "time": 11.32
+  },
+  {
+    "name": "Emin Mujezinovic",
+    "car": "Peugeot 307 2.0 HDI",
+    "time": 15.15
+  },
+  {
+    "name": "Advan Hota",
+    "car": "Shelby Mustang GT350",
+    "time": 11.22
   }
 ]

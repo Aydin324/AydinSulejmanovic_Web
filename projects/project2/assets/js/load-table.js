@@ -9,26 +9,27 @@ function loadTableData() {
     })
     .then((data) => {
       const table = document.createElement("table");
-      table.border = "1";
+      table.classList.add("table", "table-striped", "table-bordered"); // Add Bootstrap table classes
 
       const thead = document.createElement("thead");
+      thead.classList.add("thead-dark"); // Add Bootstrap class for dark header background
       thead.innerHTML = `
-                  <tr>
-                      <th>Name</th>
-                      <th>Car</th>
-                      <th>Time</th>
-                  </tr>
-              `;
+                      <tr>
+                          <th>Name</th>
+                          <th>Car</th>
+                          <th>Time</th>
+                      </tr>
+                  `;
       table.appendChild(thead);
 
       const tbody = document.createElement("tbody");
       data.forEach((item) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-                      <td>${item.name}</td>
-                      <td>${item.car}</td>
-                      <td>${item.time}</td>
-                  `;
+                          <td>${item.name}</td>
+                          <td>${item.car}</td>
+                          <td>${item.time}</td>
+                      `;
         tbody.appendChild(row);
       });
       table.appendChild(tbody);
