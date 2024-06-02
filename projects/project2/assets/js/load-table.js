@@ -9,10 +9,10 @@ function loadTableData() {
     })
     .then((data) => {
       const table = document.createElement("table");
-      table.classList.add("table", "table-striped", "table-bordered"); // Add Bootstrap table classes
+      table.classList.add("table", "table-striped", "table-bordered");
 
       const thead = document.createElement("thead");
-      thead.classList.add("thead-dark"); // Add Bootstrap class for dark header background
+      thead.classList.add("thead-dark");
       thead.innerHTML = `
                       <tr>
                           <th>Name</th>

@@ -47,6 +47,7 @@ function loadTableDataAdmin() {
         const deleteBtn = row.querySelector(".delete-btn");
         deleteBtn.addEventListener("click", () => {
           row.remove(); // Simulate deletion by removing the row from the table
+          toastr.success("Candidate deleted successfully!");
         });
 
         // Add event listener to the "Edit" button in each row

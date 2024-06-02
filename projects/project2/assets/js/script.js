@@ -4,6 +4,7 @@ $(document).ready(function () {
     templateDir: "views/",
   });
   app.run();
+  changeTheme();
 });
 
 let isChanged = false;
@@ -13,8 +14,19 @@ document.getElementById("bulb").addEventListener("click", () => {
   if (isChanged) {
     htmltag.setAttribute("data-theme", "light");
     isChanged = false;
+    localStorage.setItem("theme", "light");
   } else {
     htmltag.setAttribute("data-theme", "dark");
     isChanged = true;
+    localStorage.setItem("theme", "dark");
   }
 });
+
+function changeTheme() {
+  const theme = localStorage.getItem("theme");
+  if (theme == "dark") {
+    htmltag.setAttribute("data-theme", "dark");
+  } else {
+    htmltag.setAttribute("data-theme", "light");
+  }
+}
