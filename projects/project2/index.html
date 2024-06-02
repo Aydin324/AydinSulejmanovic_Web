@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://html5-templates.com/" />
-    <title>Responsive HTML5 Page Layout Template</title>
+    <title>402m Drag</title>
     <meta
       name="description"
       content="Simple HTML5 Page layout template with header, footer, sidebar etc."
@@ -30,7 +30,7 @@
       <nav class="navbar navbar-expand justify-content-center">
         <ul class="navbar-nav d-flex flex-row">
           <li class="nav-item">
-            <a class="nav-link btn" href="#page1">Home</a>
+            <a class="nav-link btn" href="#page1" id="prva">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn" href="#page2">Apply</a>
@@ -93,7 +93,25 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/load-table.js"></script>
+    <script src="assets/js/load-table-admin.js"></script>
+    <script>
+      function scrollToTop() {
+        setTimeout(function () {
+          window.scrollTo(0, 0);
+        }, 2);
+      }
+      document.getElementById("prva").addEventListener("click", scrollToTop);
+      window.addEventListener("load", scrollToTop);
+    </script>
   </body>
 </html>

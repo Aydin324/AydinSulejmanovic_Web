@@ -1,8 +1,48 @@
-<div class="container">
-    <h1>PAGE 3</h1>
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Edit Row</h2>
+    <form>
+      <label for="editName">Name:</label>
+      <input type="text" id="editName" name="editName" />
+      <label for="editCar">Car:</label>
+      <input type="text" id="editCar" name="editCar" />
+      <label for="editTime">Time:</label>
+      <input type="text" id="editTime" name="editTime" />
+      <button id="saveEditBtn" class="btn btn-primary">Save</button>
+    </form>
+  </div>
 </div>
-<aside>
-    <div>Sidebar 1</div>
-    <div>Sidebar 2</div>
-    <div>Sidebar 3</div>
-</aside>
+
+<!-- Your table container -->
+<div class="container">
+  <h1>Admin panel</h1>
+  <table
+    border="1"
+    id="data-table-admin"
+    class="table table-striped table-bordered"
+  >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Car</th>
+        <th>Time</th>
+        <th>View More</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data will be inserted here -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Your custom JavaScript -->
+<script>
+  loadTableDataAdmin();
+</script>

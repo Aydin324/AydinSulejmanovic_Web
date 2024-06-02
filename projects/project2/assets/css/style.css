@@ -46,7 +46,34 @@ nav a:hover {
   margin: 1vh auto 5vh auto;
 }
 
+#data-table-admin {
+  border: none;
+  padding: 10px;
+}
+
 #accordion {
   max-width: 70%;
+  margin: 0 auto 5% auto;
+}
+
+.error {
+  color: red;
+  display: block;
+}
+
+#sampleForm {
+  max-width: 55%;
   margin: 0 auto 0 auto;
+}
+
+.grid-img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

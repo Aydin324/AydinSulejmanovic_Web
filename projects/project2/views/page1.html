@@ -5,14 +5,107 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Age</th>
-        <th>Email</th>
+        <th>Car</th>
+        <th>Time</th>
       </tr>
     </thead>
     <tbody>
       <!-- Data will be inserted here -->
     </tbody>
   </table>
+
+  <h1>Gallery</h1>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img
+          src="https://auto-centar.com/wp-content/uploads/2021/09/SLIKA-1-1.jpg"
+          class="grid-img"
+          alt="Image 1"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          onclick="showImage(this)"
+        />
+      </div>
+      <div class="col-md-4 mb-4">
+        <img
+          src="https://auto-centar.com/wp-content/uploads/2021/09/SLIKA-1-1.jpg"
+          class="grid-img"
+          alt="Image 2"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          onclick="showImage(this)"
+        />
+      </div>
+      <div class="col-md-4 mb-4">
+        <img
+          src="https://auto-centar.com/wp-content/uploads/2021/09/SLIKA-1-1.jpg"
+          class="grid-img"
+          alt="Image 3"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          onclick="showImage(this)"
+        />
+      </div>
+      <div class="col-md-4 mb-4">
+        <img
+          src="https://auto-centar.com/wp-content/uploads/2021/09/SLIKA-1-1.jpg"
+          class="grid-img"
+          alt="Image 4"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          onclick="showImage(this)"
+        />
+      </div>
+      <div class="col-md-4 mb-4">
+        <img
+          src="https://auto-centar.com/wp-content/uploads/2021/09/SLIKA-1-1.jpg"
+          class="grid-img"
+          alt="Image 5"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          onclick="showImage(this)"
+        />
+      </div>
+      <div class="col-md-4 mb-4">
+        <img
+          src="https://auto-centar.com/wp-content/uploads/2021/09/SLIKA-1-1.jpg"
+          class="grid-img"
+          alt="Image 6"
+          data-bs-toggle="modal"
+          data-bs-target="#imageModal"
+          onclick="showImage(this)"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="imageModal"
+    tabindex="-1"
+    aria-labelledby="imageModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Image View</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img src="" id="modalImage" class="img-fluid" alt="Larger View" />
+        </div>
+      </div>
+    </div>
+  </div>
 
   <h1>FAQ</h1>
   <div class="accordion" id="accordion">
@@ -110,6 +203,12 @@
   </div>
 </div>
 <script>
-  console.log("This is page1 script.");
   loadTableData();
+</script>
+<script>
+  function showImage(element) {
+    var imgSrc = element.getAttribute("src");
+    var modalImage = document.getElementById("modalImage");
+    modalImage.setAttribute("src", imgSrc);
+  }
 </script>

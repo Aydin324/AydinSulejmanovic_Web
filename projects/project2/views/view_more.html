@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View More</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">View More</h1>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Key</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody id="data-body">
+            <!-- Table data will be dynamically populated here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and custom JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const dataBody = document.getElementById("data-body");
+
+        // Retrieve data from local storage
+        const rowData = JSON.parse(localStorage.getItem("rowData"));
+
+        if (rowData) {
+          // Define keys and corresponding labels
+          const keys = ["car", "name", "time"];
+
+          // Loop through keys and create table rows
+          keys.forEach((key) => {
+            const row = document.createElement("tr");
+            const keyCell = document.createElement("td");
+            const valueCell = document.createElement("td");
+
+            keyCell.textContent = key; // Set key label
+            valueCell.textContent =
+              rowData[key.toLowerCase().replace(" ", "_")]; // Get corresponding value
+
+            row.appendChild(keyCell);
+            row.appendChild(valueCell);
+
+            dataBody.appendChild(row);
+          });
+        } else {
+          // If data is not available in local storage, show an error message
+          const errorMessage = document.createElement("tr");
+          errorMessage.innerHTML = `<td colspan="2">Data not available</td>`;
+          dataBody.appendChild(errorMessage);
+        }
+      });
+    </script>
+  </body>
+</html>

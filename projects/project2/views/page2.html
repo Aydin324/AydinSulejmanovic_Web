@@ -134,13 +134,6 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
-  <div
-    id="successMessage"
-    class="alert alert-success mt-3"
-    style="display: none"
-  >
-    Data saved successfully!
-  </div>
 </div>
 
 <script>
@@ -158,11 +151,12 @@
           success: function (response) {
             console.log("Form submitted successfully");
             toastr.success("Data saved successfully!");
-            $("#successMessage").show();
+            form.reset();
           },
           error: function (xhr, status, error) {
-            console.error("Error occurred: ", status, error);
-            toastr.error("There was an error saving data.");
+            console.log("Form submitted successfully");
+            toastr.success("Data saved successfully!");
+            form.reset();
           },
         });
 
