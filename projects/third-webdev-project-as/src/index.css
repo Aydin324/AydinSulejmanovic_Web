@@ -1,0 +1,35 @@
+/* Custom */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: hsl(0, 16%, 30%); /* Change as per your design */
+  height: 60px; /* Adjust height as needed */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px; /* Adjust spacing between menu items */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from last menu item */
+}
+
+nav ul li a {
+  display: block;
+  padding: 20px; /* Adjust padding as needed */
+  color: #fff; /* Change text color as per your design */
+  text-decoration: none; /* Remove underline from links */
+}
+
+nav ul li a:hover {
+  background-color: #555; /* Change background color on hover */
+}
