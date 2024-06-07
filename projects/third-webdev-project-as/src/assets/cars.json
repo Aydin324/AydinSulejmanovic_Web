@@ -1,0 +1,32 @@
+[
+  {
+    "imageSrc": "/images/bmw_m135.jpg",
+    "title": "New BMW M135",
+    "text": "The latest BMW M135 combines performance and practicality, featuring a powerful engine and spacious interior."
+  },
+  {
+    "imageSrc": "/images/mercedes_c63_estate.jpg",
+    "title": "Mercedes-Benz C63 Estate",
+    "text": "Experience luxury and versatility with the Mercedes-Benz C63 Estate, offering ample cargo space and impressive performance."
+  },
+  {
+    "imageSrc": "/images/audi_rs4.jpg",
+    "title": "Audi RS4",
+    "text": "Unleash the thrill of driving with the Audi RS4, boasting dynamic handling and advanced technology."
+  },
+  {
+    "imageSrc": "/images/mercedes_gt.jpg",
+    "title": "New Mercedes GT",
+    "text": "Discover the new Mercedes GT, a masterpiece of engineering and design, delivering exhilarating performance on every drive."
+  },
+  {
+    "imageSrc": "/images/bmw_m5.jpg",
+    "title": "New BMW M5 CS",
+    "text": "Experience the ultimate driving machine with the new BMW M5 CS, blending luxury and performance in perfect harmony."
+  },
+  {
+    "imageSrc": "/images/porsche_gt3rs.jpg",
+    "title": "Porsche 911 992.1 GT3RS",
+    "text": "Elevate your driving experience with the Porsche 911 992.1 GT3RS, delivering track-focused performance and precision engineering."
+  }
+]

@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { Container, Typography, TextField, Button } from "@mui/material";
+import {
+  Container,
+  Typography,
+  TextField,
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+} from "@mui/material";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +18,7 @@ const ContactForm = () => {
   });
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
+  const [isDialogOpen, setDialogOpen] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -19,13 +29,23 @@ const ContactForm = () => {
     e.preventDefault();
     const errors = validateForm(formData);
     if (Object.keys(errors).length === 0) {
-      // No errors, display success message and clear form
-      setSuccessMessage("Form submitted successfully!");
-      setFormData({ name: "", email: "", message: "" });
+      // No errors, open confirmation dialog
+      setDialogOpen(true);
     } else {
       // Errors found, update state to display errors
       setErrors(errors);
     }
+  };
+
+  const handleConfirmSubmit = () => {
+    // Close confirmation dialog
+    setDialogOpen(false);
+    // Display success message
+    setSuccessMessage("Form submitted successfully!");
+    // Clear form data
+    setFormData({ name: "", email: "", message: "" });
+    // Clear errors
+    setErrors({});
   };
 
   const validateForm = (data) => {
@@ -52,9 +72,9 @@ const ContactForm = () => {
 
   return (
     <Container>
-      <Typography variant="h3">Contact Us</Typography>
+      <Typography variant="h3">Want to write to us?</Typography>
       {successMessage && (
-        <Typography variant="body1" color="success">
+        <Typography variant="body1" color="green">
           {successMessage}
         </Typography>
       )}
@@ -68,6 +88,8 @@ const ContactForm = () => {
           helperText={errors.name}
           fullWidth
           margin="normal"
+          variant="outlined"
+          sx={successMessage ? { borderColor: "green" } : {}}
         />
         <TextField
           label="Email"
@@ -79,6 +101,8 @@ const ContactForm = () => {
           helperText={errors.email}
           fullWidth
           margin="normal"
+          variant="outlined"
+          sx={successMessage ? { borderColor: "green" } : {}}
         />
         <TextField
           label="Message"
@@ -91,11 +115,25 @@ const ContactForm = () => {
           helperText={errors.message}
           fullWidth
           margin="normal"
+          variant="outlined"
+          sx={successMessage ? { borderColor: "green" } : {}}
         />
-        <Button type="submit" variant="contained" color="primary">
+        <Button type="submit" variant="outlined" color="primary">
           Submit
         </Button>
       </form>
+      <Dialog open={isDialogOpen} onClose={() => setDialogOpen(false)}>
+        <DialogTitle>Confirmation</DialogTitle>
+        <DialogContent>Are you sure you want to submit the form?</DialogContent>
+        <DialogActions>
+          <Button onClick={() => setDialogOpen(false)} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleConfirmSubmit} color="primary" autoFocus>
+            Submit
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Container>
   );
 };
